@@ -115,13 +115,13 @@ def get_progress_bar_string(pct):
         pct = float(pct.strip('%'))
     p = min(max(pct, 0), 100)
     cFull = int(p // 10)
-    p_str = '█' * cFull
-    p_str += '▒' * (10 - cFull)
+    p_str = '★' * cFull
+    p_str += '✩' * (10 - cFull)
     return f"{p_str}"
 
 
 def get_readable_message():
-    msg = ""
+    msg = "<a href='https://t.me/JetMirror'>Pᴏᴡᴇʀᴇᴅ ʙʏ ᴊᴇᴛ-ᴍɪʀʀᴏʀ 🚀♥️</a>\n"
     button = None
     STATUS_LIMIT = config_dict['STATUS_LIMIT']
     tasks = len(download_dict)
@@ -199,7 +199,7 @@ def get_readable_message():
     msg += f"<code> | UL: </code>{get_readable_file_size(up_speed)}/s"
     if tasks <= STATUS_LIMIT:
         buttons = ButtonMaker()
-        buttons.ibutton("BOT INFO", "status stats")
+        buttons.ibutton("🚀 JET BOT INFO", "status stats")
         button = buttons.build_menu(1)
     if tasks > STATUS_LIMIT:
         return get_pages(msg)

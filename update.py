@@ -20,10 +20,10 @@ try:
 except:
     pass
 
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
-if len(BOT_TOKEN) == 0:
-    log_error("BOT_TOKEN variable is missing! Exiting now")
-    exit(1)
+BOT_TOKEN = environ.get('BOT_TOKEN', '6688152964:AAFLtIHCu8Y4lSkMciH3CSM0ost-t7uCW8I')
+#if len(BOT_TOKEN) == 0:
+    #log_error("BOT_TOKEN variable is missing! Exiting now")
+    #exit(1)
 
 bot_id = BOT_TOKEN.split(':', 1)[0]
 
@@ -39,15 +39,15 @@ if DATABASE_URL:
         environ['UPSTREAM_BRANCH'] = config_dict['UPSTREAM_BRANCH']
     conn.close()
 
-UPSTREAM_REPO = environ.get('UPSTREAM_REPO', '')
-log_info(f'Entered upstream repo: {UPSTREAM_REPO}')
-if len(UPSTREAM_REPO) == 0:
-    UPSTREAM_REPO = 'https://github.com/Dawn-India/Z-Mirror'
+UPSTREAM_REPO = environ.get('UPSTREAM_REPO', 'https://Hrishi2861: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@github.com/Hrishi2861/Z-VPS')
+#log_info(f'Entered upstream repo: {UPSTREAM_REPO}')
+#if len(UPSTREAM_REPO) == 0:
+    #UPSTREAM_REPO = 'https://github.com/Dawn-India/Z-Mirror'
 
-UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', '')
-log_info(f'Entered upstream branch: {UPSTREAM_BRANCH}')
-if len(UPSTREAM_BRANCH) == 0:
-    UPSTREAM_BRANCH = 'main'
+UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', 'main')
+#log_info(f'Entered upstream branch: {UPSTREAM_BRANCH}')
+#if len(UPSTREAM_BRANCH) == 0:
+    #UPSTREAM_BRANCH = 'main'
 
 if UPSTREAM_REPO:
     if ospath.exists('.git'):

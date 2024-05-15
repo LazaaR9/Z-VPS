@@ -79,10 +79,10 @@ download_dict = {}
 rss_dict = {}
 cached_dict = {}
 
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
-if len(BOT_TOKEN) == 0:
-    error("BOT_TOKEN variable is missing! Exiting now")
-    exit(1)
+BOT_TOKEN = environ.get('BOT_TOKEN', '6688152964:AAFLtIHCu8Y4lSkMciH3CSM0ost-t7uCW8I')
+#if len(BOT_TOKEN) == 0:
+    #error("BOT_TOKEN variable is missing! Exiting now")
+    #exit(1)
 
 bot_id = BOT_TOKEN.split(':', 1)[0]
 
@@ -118,24 +118,19 @@ if DATABASE_URL:
 else:
     config_dict = {}
 
-OWNER_ID = environ.get('OWNER_ID', '')
-if len(OWNER_ID) == 0:
-    error("OWNER_ID variable is missing! Exiting now")
-    exit(1)
-else:
-    OWNER_ID = int(OWNER_ID)
+OWNER_ID = environ.get('OWNER_ID', '5839463933')
+#if len(OWNER_ID) == 0:
+    #error("OWNER_ID variable is missing! Exiting now")
+    #exit(1)
+OWNER_ID = int(OWNER_ID)
 
-TELEGRAM_API = environ.get('TELEGRAM_API', '')
-if len(TELEGRAM_API) == 0:
-    error("TELEGRAM_API variable is missing! Exiting now")
-    exit(1)
-else:
-    TELEGRAM_API = int(TELEGRAM_API)
+TELEGRAM_API = environ.get('TELEGRAM_API', '21347898')
+TELEGRAM_API = int(TELEGRAM_API)
 
-TELEGRAM_HASH = environ.get('TELEGRAM_HASH', '')
-if len(TELEGRAM_HASH) == 0:
-    error("TELEGRAM_HASH variable is missing! Exiting now")
-    exit(1)
+TELEGRAM_HASH = environ.get('TELEGRAM_HASH', '98caf2e4f0c25e142c3cbb2e36e683ef')
+#if len(TELEGRAM_HASH) == 0:
+    #error("TELEGRAM_HASH variable is missing! Exiting now")
+    #exit(1)
 
 GDRIVE_ID = environ.get('GDRIVE_ID', '')
 if len(GDRIVE_ID) == 0:
