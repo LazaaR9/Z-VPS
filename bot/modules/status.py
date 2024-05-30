@@ -32,7 +32,7 @@ async def mirror_status(_, message):
         msg = '<a href="https://t.me/jetmirror">Pᴏᴡᴇʀᴇᴅ ʙʏ ᴊᴇᴛ-ᴍɪʀʀᴏʀ 🚀♥️</a>\n\n'
         msg += '<b>Uninstall Telegram and enjoy your life!</b>'
         msg += '\n\nNo Active Tasks!\n___________________________'
-        msg += f"\n<b>CPU</b>: {cpu_percent()}% | <b>FREE</b>: {free}" \
+        msg += f"\n<b>CPU</b>: {cpu_percent()}% | <b>FREE</b>: <b>Access Denied</b>" \
                f"\n<b>RAM</b>: {virtual_memory().percent}% | <b>UPTIME</b>: {currentTime}"
         reply_message = await sendMessage(message, msg)
         await auto_delete_message(message, reply_message)
@@ -91,7 +91,7 @@ def bot_sys_stats():
             seed += 1
     bmsg = f'______🚀 Jet Bot Info______\n\n'
     bmsg += f'C: {cpup}% | R: {ramp}% | D: {disk}%\n\n'
-    bmsg += f'T : {totl} | F : {free} | Q : {inqu}\n'
+    bmsg += f'T : Access Denied | F : Access Denied | Q : {inqu}\n'
     bmsg += f'DL: {dwld} | UL: {upld} | SD: {seed}\n'
     bmsg += f'ZP: {arch} | UZ: {extr} | SP: {splt}\n\n'
     bmsg += f'Bandwidth Used: {traf}'
@@ -124,7 +124,7 @@ async def stats(_, message, edit_mode=False):
                 f'<code>CPU  : </code>{get_progress_bar_string(cpuUsage)} {cpuUsage}%\n' \
                 f'<code>RAM  : </code>{get_progress_bar_string(mem_p)} {mem_p}%\n' \
                 f'<code>SWAP : </code>{get_progress_bar_string(swap.percent)} {swap.percent}%\n' \
-                f'<code>DISK : </code>{get_progress_bar_string(disk)} {disk}%\n\n' \
+                f'<code>DISK : </code><b>Access Denied</b>\n\n' \
                 f'<code>Bot Uptime      : </code> {botTime}\n' \
                 f'<code>Uploaded        : </code> {sent}\n' \
                 f'<code>Downloaded      : </code> {recv}\n' \
@@ -143,8 +143,8 @@ async def stats(_, message, edit_mode=False):
                 f'<b>SWAP:</b> {get_progress_bar_string(swap.percent)}<code> {swap.percent}%</code>\n' \
                 f'<b>Total</b> <code>{get_readable_file_size(swap.total)}</code> | ' \
                 f'<b>Free:</b> <code>{get_readable_file_size(swap.free)}</code>\n\n' \
-                f'<b>DISK:</b> {get_progress_bar_string(disk)}<code> {disk}%</code>\n' \
-                f'<b>Total:</b> <code>{total}</code> | <b>Free:</b> <code>{free}</code>'
+                f'<b>DISK:</b> <b>Access Denied</b>\n' \
+                f'<b>Total:</b> <code>Access Denied</code> | <b>Free:</b> <code>Access Denied</code>'
 
     buttons.ibutton("Sys Stats",  "show_sys_stats")
     buttons.ibutton("Repo Stats", "show_repo_stats")
