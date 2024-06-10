@@ -79,7 +79,7 @@ download_dict = {}
 rss_dict = {}
 cached_dict = {}
 
-BOT_TOKEN = environ.get('BOT_TOKEN', '6688152964:AAFLtIHCu8Y4lSkMciH3CSM0ost-t7uCW8I')
+BOT_TOKEN = environ.get('BOT_TOKEN', '6688152964:AAFMaOi2XWZr0kMI9KBmjI689rubbtPqIIk')
 #if len(BOT_TOKEN) == 0:
     #error("BOT_TOKEN variable is missing! Exiting now")
     #exit(1)
